@@ -18,7 +18,7 @@ def create_time_series(data, look_back=1):
     return np.array(X), np.array(Y)
 
 # Load the historical stock price data
-df = pd.read_csv('firstfilework\stock_data.csv')
+df = pd.read_csv('stock_data.csv')
 
 # Extract the 'Close' column as the target variable
 data = df['Close'].values.reshape(-1, 1)
