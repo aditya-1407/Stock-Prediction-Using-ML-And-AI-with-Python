@@ -40,7 +40,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 model = Sequential()
 model.add(LSTM(64, input_shape=(look_back, 1)))
 model.add(Dense(1))
-model.compile(optimizer=Adam(learning_rate=0.5), loss='mean_squared_error')
+model.compile(optimizer=Adam(learning_rate=0.01), loss='mean_squared_error')
 
 # Train the model
 history = model.fit(X_train, y_train, epochs=100, batch_size=64, validation_split=0.2)
